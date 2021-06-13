@@ -1,7 +1,6 @@
-#
 # ShellChat
 ShellChat is a little program to chat with your friend within the same network.
-#
+
 # How to use :
 > make
 
