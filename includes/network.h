@@ -36,4 +36,6 @@ typedef struct in_addr IN_ADDR;
 
 /*---------------------------------FUNCTIONS-----------------------------------*/
 
+SOCKET createSocket(void);
+
 #endif

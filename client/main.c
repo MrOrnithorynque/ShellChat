@@ -8,19 +8,7 @@
 #include <string.h>
 #include "my.h"
 #include "chat.h"
-#include "reseau.h"
-
-static SOCKET createSocket(void)
-{
-    SOCKET sock = socket(AF_INET, SOCK_STREAM, 0);
-
-    if (sock == INVALID_SOCKET)
-    {
-        perror("socket() error.");
-        exit(EXIT_FAILURE);
-    }
-    return sock;
-}
+#include "network.h"
 
 user_t user_data(void)
 {

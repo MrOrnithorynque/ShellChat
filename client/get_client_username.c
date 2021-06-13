@@ -8,7 +8,7 @@
 #include <string.h>
 #include "my.h"
 #include "chat.h"
-#include "reseau.h"
+#include "network.h"
 
 static int check_username(char *username)
 {

@@ -14,7 +14,7 @@ LIB_PATH 	=	lib/my
 CFLAGS 		= 	-Wall -Wextra -g
 CPPFLAGS	= 	-I../includes/
 LDFLAGS 	= 	-L../lib/
-LDLIBS 		= 	-lmy -pthread
+LDLIBS 		= 	-lmy -lnetwork -pthread
 
 SRC 		= 	main.c			\
 

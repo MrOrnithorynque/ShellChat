@@ -8,9 +8,9 @@
 #include <string.h>
 #include "my.h"
 #include "chat.h"
-#include "reseau.h"
+#include "network.h"
 
-static SOCKET createSocket(void)
+SOCKET creatSocket(void)
 {
     SOCKET sock = socket(AF_INET, SOCK_STREAM, 0);
 
@@ -19,7 +19,6 @@ static SOCKET createSocket(void)
         perror("socket() error.");
         exit(EXIT_FAILURE);
     }
-
     return sock;
 }
 
