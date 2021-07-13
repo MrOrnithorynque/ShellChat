@@ -1,3 +1,4 @@
+//Not working for the moment (will update soon)
 # ShellChat (In progress)
 ShellChat is a little program to chat with your friend within the same network.
 
