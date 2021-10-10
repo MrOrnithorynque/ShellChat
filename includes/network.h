@@ -24,8 +24,8 @@
 #define SOCKET_ERROR    -1
 #define closesocket(s)  close(s)
 #define PORT            30000
-#define IP              "127.0.0.1" //adresse IP privée : 192.168.43.36, sinon locale : 127.0.0.1
-#define MAX_CLIENTS     100
+#define IP              "127.0.0.1"
+#define MAX_CLIENTS     5
 
 /*-----------------------------------STRUCTS-----------------------------------*/
 
@@ -36,6 +36,7 @@ typedef struct in_addr IN_ADDR;
 
 /*---------------------------------FUNCTIONS-----------------------------------*/
 
-SOCKET createSocket(void);
+void    check(int return_value, char *error_msg);
+SOCKET  createSocket(void);
 
 #endif
