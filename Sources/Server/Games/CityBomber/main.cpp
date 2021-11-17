@@ -1,7 +1,16 @@
 /*
 ** SHELLCHAT PROJECT NOVEMBER 2021
-** connet4_main.cpp :
-**   Main of the multiplayer game "ConNet4". It's just a connect4.
+** main.cpp :
+**   Main of the multiplayer/solo game "CityBomber". It's just a basic CityBomber.
+**
+**     -=<=-<    -=<=-< 
+**       *         *
+**   
+**        *          *
+**           ⣿⣿
+**    ⣿⣿    ⣿⣿  ⣿  ⣿
+**	 ⣿⣿⣿  x⣿⣿⣿ ⣿  ⣿⣿
+**   ------------------
 */
 
 #include "city_bomber.hpp"
