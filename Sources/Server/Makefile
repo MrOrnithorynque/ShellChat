@@ -12,13 +12,21 @@ CPPFLAGS	= 	-I../../Includes/ -I../Client
 LDFLAGS 	= 	-L../../Libraries/
 LDLIBS 		=	-lmy_cpp -lnetwork -pthread
 
-SRCS		=	main.cpp					\
-				client_thread.cpp 			\
-				client_verification.cpp 	\
-				cmd_msg.cpp 				\
-				get_host_informations.cpp	\
-				handle_client.cpp			\
-				server_setting.cpp 			\
+SRCS		=	main.cpp							\
+				client_thread.cpp 					\
+				client_verification.cpp 			\
+				command.cpp 						\
+				get_host_informations.cpp			\
+				handle_client.cpp					\
+				server_setting.cpp 					\
+				Games/ConNet4/main.cpp 				\
+				Games/ConNet4/recv_input.cpp		\
+				Games/ConNet4/render_game.cpp 		\
+				Games/ConNet4/send_game_data.cpp 	\
+				Games/NeTron/main.cpp 				\
+				Games/NeTron/recv_input.cpp			\
+				Games/NeTron/render_game.cpp 		\
+				Games/NeTron/send_game_data.cpp 	\
 
 OBJ			=	$(SRCS:.cpp=.o)
 

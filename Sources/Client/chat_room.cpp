@@ -1,5 +1,7 @@
 /*
-**
+** SHELLCHAT PROJECT NOVEMBER 2021
+** chat_room.cpp
+**   Start all threads.
 */
 
 #include <thread>

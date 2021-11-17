@@ -37,6 +37,7 @@ void client_thread(net::Client Client)
 
         if (recv_value > 0)
         {
+            // if (!command(MyClientData.client_msg)) {
             std::cout << MyClientData.username << " : " << MyClientData.client_msg << std::endl;
             std::cout << "encore?\n";
 
