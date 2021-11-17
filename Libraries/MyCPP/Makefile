@@ -1,5 +1,5 @@
 
-INCLUDES	=	Includes/
+INCLUDES	=	Includes/MYCPP/
 
 INCLUDE_PATH=	../../Includes
 
@@ -32,8 +32,9 @@ all:
 
 make_lib: $(OBJ)
 	ar rc $(LIB_NAME) $(OBJ)
- 	cp $(LIB_NAME) ../
- 	cp -t $(INCLUDE_PATH) $(INCLUDES)
+	cp $(LIB_NAME) ../
+	cp -r $(INCLUDES) $(INCLUDE_PATH)
+	cp Includes/my_cpp.hpp $(INCLUDE_PATH)
 
 clean:
 	$(RM) $(OBJ)

@@ -6,13 +6,13 @@
 #include <iostream>
 #include <cstring>
 
-#include "my.hpp"
+#include "my_cpp.hpp"
 #include "client.hpp"
 
-void recv_msg_thread(net::Client *Client)
+void shellchat::recv_msg_thread(net::Client *Client)
 {
-    MsgData_t MsgData;
-    char msg[MAX_MSG_LENGTH];
+    shellchat::MsgData_t MsgData;
+    char msg[shellchat::MAX_MSG_LENGTH];
     int recv_value;
 
     while (true)
@@ -28,6 +28,6 @@ void recv_msg_thread(net::Client *Client)
             break;
         }
 
-        memset(msg, 0, sizeof(msg));
+        memset(&msg, 0, sizeof(msg));
     }
 }

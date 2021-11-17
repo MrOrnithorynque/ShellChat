@@ -1,13 +1,14 @@
 #include <string.h>
 #include <vector>
 
+#include "my_cpp.hpp"
 #include "server.hpp"
 #include "client.hpp"
-#include "my.hpp"
 
 bool stop_server = false;
 std::vector<net::Client> AllClients;
 
+/*
 void send_to_all(SOCKET sender_socket, char msg[200])
 {
     size_t size = AllClients.size();
@@ -19,10 +20,11 @@ void send_to_all(SOCKET sender_socket, char msg[200])
         }
     }
 }
+*/
 
-void client_thread(net::Client Client)
+void shellchat::client_thread(net::Client Client)
 {
-    MsgData_t MyClientData;
+    shellchat::MsgData_t MyClientData;
     char client_msg[200];
     int recv_value;
 
@@ -47,6 +49,7 @@ void client_thread(net::Client Client)
             {
                 if (AllClients[i].ClientData.socket_client != Client.ClientData.socket_client)
                 {
+                    std::cout << "sending to " << AllClients[i].ClientData.socket_client << std::endl;
                     send(AllClients[i].ClientData.socket_client, &MyClientData, sizeof(MyClientData), 0);
                 }
             }

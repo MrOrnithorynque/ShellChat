@@ -18,7 +18,7 @@ SRCS		=	main.cpp								\
 				command.cpp 							\
 				get_host_informations.cpp				\
 				handle_client.cpp						\
-				server_setting.cpp 						\
+				server_settings.cpp 					\
 				Games/CityBomber/main.cpp 				\
 				Games/CityBomber/recv_input.cpp			\
 				Games/CityBomber/render_game.cpp 		\

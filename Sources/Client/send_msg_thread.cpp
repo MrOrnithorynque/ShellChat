@@ -6,9 +6,9 @@
 #include <cstring>
 
 #include "client.hpp"
-#include "my.hpp"
+#include "my_cpp.hpp"
 
-void send_msg_thread(net::Client *Client, MsgData_t *MyClientData)
+void shellchat::send_msg_thread(net::Client *Client, shellchat::MsgData_t *MyClientData)
 {
     std::string user_input;
     char msg[200];
