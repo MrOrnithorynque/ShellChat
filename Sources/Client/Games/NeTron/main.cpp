@@ -5,6 +5,8 @@
 **   other players by leading them into your trail.
 */
 
+#include "netron.hpp"
+
 int netron_main(int argc, char **argv)
 {
 	return 0;

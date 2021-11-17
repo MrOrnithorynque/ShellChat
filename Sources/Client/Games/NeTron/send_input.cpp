@@ -3,3 +3,5 @@
 ** send_input.cpp :
 **   Send input from user to the server.
 */
+
+#include "netron.hpp"

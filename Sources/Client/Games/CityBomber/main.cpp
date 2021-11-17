@@ -4,9 +4,9 @@
 **   Main of the multiplayer game "ConNet4". It's just a connect4.
 */
 
-#include "connet4.hpp"
+#include "city_bomber.hpp"
 
-int connet4_main(int argc, char **argv)
+int city_bomber_main(int argc, char **argv)
 {
 	return 0;
 }

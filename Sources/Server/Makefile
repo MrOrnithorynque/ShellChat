@@ -8,25 +8,29 @@ EXEC_NAME	=	ShellChat_server
 EXEC_PATH	=	../../Binaries/
 
 CFLAGS 		= 	-Wall -Wextra -g
-CPPFLAGS	= 	-I../../Includes/ -I../Client
+CPPFLAGS	= 	-I../../Includes/ -I../Client 
 LDFLAGS 	= 	-L../../Libraries/
 LDLIBS 		=	-lmy_cpp -lnetwork -pthread
 
-SRCS		=	main.cpp							\
-				client_thread.cpp 					\
-				client_verification.cpp 			\
-				command.cpp 						\
-				get_host_informations.cpp			\
-				handle_client.cpp					\
-				server_setting.cpp 					\
-				Games/ConNet4/main.cpp 				\
-				Games/ConNet4/recv_input.cpp		\
-				Games/ConNet4/render_game.cpp 		\
-				Games/ConNet4/send_game_data.cpp 	\
-				Games/NeTron/main.cpp 				\
-				Games/NeTron/recv_input.cpp			\
-				Games/NeTron/render_game.cpp 		\
-				Games/NeTron/send_game_data.cpp 	\
+SRCS		=	main.cpp								\
+				client_thread.cpp 						\
+				client_verification.cpp 				\
+				command.cpp 							\
+				get_host_informations.cpp				\
+				handle_client.cpp						\
+				server_setting.cpp 						\
+				Games/CityBomber/main.cpp 				\
+				Games/CityBomber/recv_input.cpp			\
+				Games/CityBomber/render_game.cpp 		\
+				Games/CityBomber/send_game_data.cpp 	\
+				Games/ConNet4/main.cpp 					\
+				Games/ConNet4/recv_input.cpp			\
+				Games/ConNet4/render_game.cpp 			\
+				Games/ConNet4/send_game_data.cpp 		\
+				Games/NeTron/main.cpp 					\
+				Games/NeTron/recv_input.cpp				\
+				Games/NeTron/render_game.cpp 			\
+				Games/NeTron/send_game_data.cpp 		\
 
 OBJ			=	$(SRCS:.cpp=.o)
 

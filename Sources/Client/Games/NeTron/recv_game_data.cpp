@@ -3,3 +3,5 @@
 ** recv_game_data.cpp :
 **   Receve game data.
 */
+
+#include "netron.hpp"
