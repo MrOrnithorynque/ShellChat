@@ -1,4 +1,4 @@
-//Not working for the moment perfectly(will update soon)
+//Not working for the moment (will update soon)
 # ShellChat (In progress)
 ShellChat is a little program to chat with your friend and play simple games within the same network.</br>
 *(will MAYBE update to enable chat trough internet)*
