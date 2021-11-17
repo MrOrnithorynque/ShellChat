@@ -1,40 +1,37 @@
-##
-## EPITECH PROJECT, 2020
-## root
-## File description:
-## Main Makefile
-##
+#
+# ShellChat main Makefile
+#
 
-RM 			=	rm -f
+SRCS_PATH	=	Sources/
 
-LIBMY_PATH 	=	lib/my
-LIBNET_PATH =	lib/network
-SERVER_PATH =	server/
-CLIENT_PATH =	client/
+LIBS_PATH	=	Libraries/
 
-all:	make_lib make_project
+all:
+	@echo "\n\033[34m\n--- MAIN MAKEFILE ShellChat---\n\n\033[0m"
+	make make_libs
+	make make_srcs
 
-make_lib:
-	make -C $(LIBMY_PATH)
-	make -C $(LIBNET_PATH)
+make_libs:
+	mkdir -p Includes Binaries
+	make -C $(LIBS_PATH)
 
-make_project:
-	make -C $(SERVER_PATH)
-	make -C $(CLIENT_PATH)
+make_srcs:
+	make -C $(SRCS_PATH)
 
 clean:
-	make clean -C $(LIBMY_PATH)
-	make clean -C $(LIBNET_PATH)
-	make clean -C $(SERVER_PATH)
-	make clean -C $(CLIENT_PATH)
-	$(RM) vgcore*
+	make clean -C $(LIBS_PATH)
+	make clean -C $(SRCS_PATH)
 
-fclean:	clean
-	make fclean -C $(LIBMY_PATH)
-	make fclean -C $(LIBNET_PATH)
-	make fclean -C $(SERVER_PATH)
-	make fclean -C $(CLIENT_PATH)
+fclean:
+	rm -r Includes Binaries
+	make fclean -C $(LIBS_PATH)
+	make fclean -C $(SRCS_PATH)
 
-re: 	fclean all
+re:
+	make re -C $(LIBS_PATH)
+	make re -C $(SRCS_PATH)
 
-.PHONY: all clean fclean re make_lib
+run:
+	make run -C $(SRCS_PATH)
+
+.PHONY: all make_libs clean fclean re run
