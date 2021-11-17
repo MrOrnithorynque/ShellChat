@@ -13,12 +13,12 @@ ShellChat is a little program to chat with your friend within the same network.<
   > └───ShellChat_client</br>
 
 - Launch the server binary
-  > ./ShellChat_server {IP ADRESS} {PORT}
+  > ./ShellChat_server [IP ADRESS] [PORT]
   
   And wait for the client(s) to connect.
  
 - Launch the client binary
-  > ./ShellChat_client {IP ADRESS} {PORT}
+  > ./ShellChat_client [IP ADRESS] [PORT]
  
 # Doc
 ## ShellChat_server
