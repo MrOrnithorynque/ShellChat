@@ -8,7 +8,7 @@
 #include "client.hpp"
 #include "my_cpp.hpp"
 
-void shellchat::send_msg_thread(net::Client *Client, shellchat::MsgData_t *MyClientData)
+void shellchat::send_msg_thread(net::Client *Client, shellchat::UserData_t *MyClientData)
 {
     std::string user_input;
     char msg[200];

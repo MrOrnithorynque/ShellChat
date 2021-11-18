@@ -24,7 +24,7 @@ void send_to_all(SOCKET sender_socket, char msg[200])
 
 void shellchat::client_thread(net::Client Client)
 {
-    shellchat::MsgData_t MyClientData;
+    shellchat::UserData_t MyClientData;
     char client_msg[200];
     int recv_value;
 

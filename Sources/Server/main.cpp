@@ -9,6 +9,7 @@
 
 int main(int argc, char **argv)
 {
+    shellchat::error_handling(argc, argv);
     //check_options(argc, argv);
     std::cout << "Launching server ...\n";
     net::Server Server;

@@ -11,7 +11,7 @@
 
 void shellchat::recv_msg_thread(net::Client *Client)
 {
-    shellchat::MsgData_t MsgData;
+    shellchat::UserData_t MsgData;
     char msg[shellchat::MAX_MSG_LENGTH];
     int recv_value;
 

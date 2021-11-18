@@ -56,7 +56,7 @@ namespace net
             void exitClient(void);
 
             Client() { clientData(); }
-            ~Client() { /*free what to free*/}
+            ~Client() {/*free what to free*/}
 
         private:
             inline void clientData(void)

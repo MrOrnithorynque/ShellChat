@@ -10,7 +10,7 @@
 
 void shellchat::chat_room(net::Client *Client)
 {
-    shellchat::MsgData_t MyClientData;
+    shellchat::UserData_t MyClientData;
 
     std::cout << "Username : ";
     std::cin >> MyClientData.username;
