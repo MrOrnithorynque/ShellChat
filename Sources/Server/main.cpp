@@ -9,7 +9,10 @@
 
 int main(int argc, char **argv)
 {
-    shellchat::error_handling(argc, argv);
+    shellchat::error_handling(argc, argv); //no error handling, cause if no arg, should auto everything
+    //host_settings(argc, argv, &Host);
+    // error handling take place in host_settings
+
     //check_options(argc, argv);
     std::cout << "Launching server ...\n";
     net::Server Server;
