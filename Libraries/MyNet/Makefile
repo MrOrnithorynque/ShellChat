@@ -16,6 +16,7 @@ SRCS		=	Socket/create_socket.cpp 				\
 				ClassClient/exit_client.cpp				\
 				ClassServer/close_server.cpp			\
 				ClassServer/wait_client_connection.cpp	\
+				SendData/m_send.cpp 					\
 
 OBJ 		= 	$(SRCS:.cpp=.o)
 

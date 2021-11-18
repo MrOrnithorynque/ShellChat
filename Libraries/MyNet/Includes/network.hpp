@@ -39,9 +39,10 @@ typedef int     SOCKET;
 
 namespace net
 {
-    static void         print_err(const char *error_msg) { std::cerr << "\033[31m" << error_msg << "\033[0m" << "\n"; }
-    void                check(int return_value, const char *error_msg);
-    SOCKET              create_socket(void);
+    static void print_err(const char *error_msg) { std::cerr << "\033[31m" << error_msg << "\033[0m" << "\n"; }
+    void        check(int return_value, const char *error_msg);
+    SOCKET      create_socket(void);
+    void        m_send(void *data);
 
     class Client
     {
