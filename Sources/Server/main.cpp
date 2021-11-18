@@ -7,6 +7,11 @@
 #include <thread>
 #include "server.hpp"
 
+/*
+** FUNCTION that send a size and type for the client to prepare for the second send who send the data
+** so it's modular
+*/
+
 int main(int argc, char **argv)
 {
     shellchat::error_handling(argc, argv); //no error handling, cause if no arg, should auto everything
