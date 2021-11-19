@@ -11,19 +11,21 @@ namespace shellchat
 		private:
 
 		public:
-			net::Server Server;
-			// do the firend thing where you can call the Server class method directly in Host class
-
 			typedef struct Data_s {
-
+				const char *IP_ADRESS;
+				const unsigned int PORT;
+				const unsigned int MAX_CLIENT; // = 50;
 			} Data_t;
+
+			net::Server Server; // do the friend thing where you can call the Server class method directly in Host class
+			Data_t HostData;
 
 			Host() {/**/}
 			~Host() {/*free what to free*/}
 	}; // class Host
 
 	void client_thread(net::Client Client);
-	void error_handling(int argc, char **argv);
+	void error_handling(int const argc, char **argv, Host.Data_t *HostData);
 	void handle_client(net::Server *Server);
-	void host_settings(int argc, char **argv, shellchat::Host *Host);
+	void host_settings(Host.Data_t *Host);
 } // namespace shellchat

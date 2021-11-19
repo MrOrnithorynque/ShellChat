@@ -12,13 +12,12 @@
 ** so it's modular
 */
 
-int main(int argc, char **argv)
+int main(int const argc, char **argv)
 {
-    shellchat::error_handling(argc, argv); //no error handling, cause if no arg, should auto everything
-    //host_settings(argc, argv, &Host);
-    // error handling take place in host_settings
+    shellchat::Host Host;
+    shellchat::error_handling(argc, argv, &Host.HostData);
 
-    //check_options(argc, argv);
+    // launching_server(&Host);
     std::cout << "Launching server ...\n";
     net::Server Server;
 
