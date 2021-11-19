@@ -3,7 +3,6 @@
 ShellChat is a little program to chat with your friend and play simple games within the same network.</br>
 *(will MAYBE update to enable chat trough internet)*
 
-</br></br>
 # How to use :
 - Build the project
   > make
@@ -21,7 +20,6 @@ ShellChat is a little program to chat with your friend and play simple games wit
 - Launch the client binary
   > ./ShellChat_client [IP ADRESS] [PORT]
 
-</br></br>
 # What is comming next ?
 ## Games
 Yes, I want the possibility to play with other users on the same game. </br>
@@ -34,7 +32,6 @@ __But, which games ?__ </br>
 ## Windows/Mac/Linux compatibility
 I want to dockerise the app, I'm not sure if I will take the time to do it but for the moment it is in a side of my head.
 
-</br></br>
 # Doc
 ## ShellChat_server
 ## ShellChat_client
