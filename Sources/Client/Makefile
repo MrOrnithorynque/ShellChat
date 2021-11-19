@@ -15,6 +15,7 @@ LDLIBS 		=	-lmy_cpp -lnetwork -pthread -lncurses
 SRCS		=	main.cpp								\
 				chat_room.cpp							\
 				get_client_data.cpp 					\
+				create_random_username.cpp 				\
 				get_server_verification.cpp 			\
 				recv_msg_thread.cpp						\
 				send_msg_thread.cpp						\

@@ -34,6 +34,7 @@ namespace shellchat
     const unsigned int MAX_USERNAME_LENGTH  = 20;
 
     void chat_room(net::Client *Client);
+    char *create_random_username(void);
     void get_server_verification(net::Client *Client);
     void recv_msg_thread(net::Client *Client);
     void send_msg_thread(net::Client *Client, UserData_t *MyClientData);
