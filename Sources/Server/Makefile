@@ -10,7 +10,7 @@ EXEC_PATH	=	../../Binaries/
 CFLAGS 		= 	-Wall -Wextra -g
 CPPFLAGS	= 	-I../../Includes/ -I../Client 
 LDFLAGS 	= 	-L../../Libraries/
-LDLIBS 		=	-lmy_cpp -lnetwork -pthread
+LDLIBS 		=	-lmy_cpp -lnetwork -pthread -lncurses
 
 SRCS		=	main.cpp								\
 				client_thread.cpp 						\

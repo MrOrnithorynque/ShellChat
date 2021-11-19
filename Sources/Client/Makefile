@@ -10,7 +10,7 @@ EXEC_PATH	=	../../Binaries/
 CFLAGS 		= 	-Wall -Wextra -g
 CPPFLAGS	= 	-I../../Includes/ -I../Server
 LDFLAGS 	= 	-L../../Libraries/
-LDLIBS 		=	-lmy_cpp -lnetwork -pthread
+LDLIBS 		=	-lmy_cpp -lnetwork -pthread -lncurses
 
 SRCS		=	main.cpp								\
 				chat_room.cpp							\
