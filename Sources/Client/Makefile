@@ -14,8 +14,9 @@ LDLIBS 		=	-lmy_cpp -lnetwork -pthread -lncurses
 
 SRCS		=	main.cpp								\
 				chat_room.cpp							\
-				get_client_data.cpp 					\
+				create_random_username.cpp 				\
 				get_server_verification.cpp 			\
+				get_user_data.cpp 						\
 				recv_msg_thread.cpp						\
 				send_msg_thread.cpp						\
 				Games/CityBomber/main.cpp 				\

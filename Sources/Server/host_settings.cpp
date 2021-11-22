@@ -7,5 +7,5 @@
 
 void shellchat::host_settings(int argc, char **argv, shellchat::Host *Host)
 {
-	retrun;
+	return;
 }

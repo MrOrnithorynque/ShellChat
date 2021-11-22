@@ -8,9 +8,11 @@
 
 #include "client.hpp"
 
+// no client, net::client into UserData_t *MyClientData;
 void shellchat::chat_room(net::Client *Client)
 {
     shellchat::UserData_t MyClientData;
+
 
     std::cout << "Username : ";
     std::cin >> MyClientData.username;

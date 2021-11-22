@@ -7,8 +7,9 @@
 
 #include "client.hpp"
 
-void shellchat::get_server_verification(net::Client *Client)
+unsigned int shellchat::get_server_verification(net::Client *Client)
 {
 	int send_value;
-	int recv_value = recv(Client->ClientData.socket_client, &send_value, sizeof(int), 0);
+
+	return recv(Client->ClientData.socket_client, &send_value, sizeof(int), 0);
 }

@@ -4,11 +4,12 @@
 
 int main(int argc, char **argv)
 {
-    net::Client Client;
+    shellchat::User User;
 
-    Client.connectClient();
-    shellchat::chat_room(&Client);
-    Client.exitClient();
+    User.get_user_data();
+    User.Client.connectClient();
+    shellchat::chat_room(&User.Client);
+    User.Client.exitClient();
 
     return 0;
 }

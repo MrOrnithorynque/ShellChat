@@ -11,7 +11,6 @@
 void shellchat::send_msg_thread(net::Client *Client, shellchat::UserData_t *MyClientData)
 {
     std::string user_input;
-    char msg[200];
 
     while (true)
     {
@@ -24,15 +23,17 @@ void shellchat::send_msg_thread(net::Client *Client, shellchat::UserData_t *MyCl
         } // else command
         else if (user_input.compare("exit") == 0)
         {
-            bzero(msg, 200);
-            
+            bzero(MyClientData->client_msg, 200);
+
             break;
         }
         else
         {
             strncpy(MyClientData->client_msg, user_input.c_str(), 200);
-            send(Client->ClientData.socket_client, MyClientData, sizeof(MyClientData), 0);
-            bzero(msg, 200);
+            send(Client->ClientData.socket_client, MyClientData, sizeof(*MyClientData), 0);
+            bzero(MyClientData->client_msg, 200);
         }
+
+        sleep(1);
     }
 }

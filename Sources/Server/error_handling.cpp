@@ -4,14 +4,14 @@
 **   Check if given arguments are corrects
 */
 
-#include "MYCPP/string.hpp"
+// #include "MYCPP/string.hpp"
 #include "server.hpp"
 
 static void nb_args(int argc)
 {
-	if (argc < 2)
+	if (argc > 3)
 	{
-		my_cpp::put_error("error: Wrong number of arguments.\n");
+		//my_cpp::put_error("error: Wrong number of arguments.\n");
 		exit(-1);
 	}
 }

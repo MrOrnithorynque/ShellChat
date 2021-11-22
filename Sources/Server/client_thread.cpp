@@ -35,7 +35,7 @@ void shellchat::client_thread(net::Client Client)
 
     while (!stop_server)
     {
-        recv_value = recv(Client.ClientData.socket_client, &MyClientData, sizeof(client_msg), 0);
+        recv_value = recv(Client.ClientData.socket_client, &MyClientData, sizeof(UserData_t), 0);
 
         if (recv_value > 0)
         {
