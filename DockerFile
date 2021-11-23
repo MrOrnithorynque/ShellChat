@@ -1,0 +1,11 @@
+FROM ubuntu
+
+WORKDIR /ShellChat
+
+COPY . /ShellChat
+
+RUN apt-get update
+
+RUN apt install build-essential
+
+RUN apt-get install libncurses5-dev
