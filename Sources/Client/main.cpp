@@ -6,7 +6,7 @@ int main(int argc, char **argv)
 {
     shellchat::User User;
 
-    User.get_user_data();
+    User.getUserData();
     User.Client.connectClient();
     shellchat::chat_room(&User.Client);
     User.Client.exitClient();

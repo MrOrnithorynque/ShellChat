@@ -8,7 +8,7 @@ EXEC_NAME	=	ShellChat_server
 EXEC_PATH	=	../../Binaries/
 
 CFLAGS 		= 	-Wall -Wextra -g
-CPPFLAGS	= 	-I../../Includes/ -I../Client 
+CPPFLAGS	= 	-I../../Includes/ -I../Client -I./
 LDFLAGS 	= 	-L../../Libraries/
 LDLIBS 		=	-lmy_cpp -lnetwork -pthread -lncurses
 
@@ -31,6 +31,10 @@ SRCS		=	main.cpp								\
 				Games/NeTron/recv_input.cpp				\
 				Games/NeTron/render_game.cpp 			\
 				Games/NeTron/send_game_data.cpp 		\
+				HostClass/generate_port.cpp 			\
+				HostClass/get_host_ip.cpp 				\
+				HostClass/host_settings.cpp				\
+				HostClass/send_to_all.cpp				\
 
 OBJ			=	$(SRCS:.cpp=.o)
 

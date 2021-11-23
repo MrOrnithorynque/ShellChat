@@ -5,7 +5,7 @@
 
 namespace shellchat
 {
-    const unsigned char MAX_MSG_LENGTH      = 200;
+    const unsigned char MAX_MSG_LENGTH      = 400;
     const unsigned char MAX_USERNAME_LENGTH = 30;
 
     typedef struct UserData_s {
@@ -17,8 +17,6 @@ namespace shellchat
     class User
     {
         private:
-
-        public:
             typedef struct Data_s {
                 char client_msg[MAX_MSG_LENGTH];
                 char username[MAX_USERNAME_LENGTH];
@@ -26,10 +24,12 @@ namespace shellchat
                 char *color;
             } Data_t;
 
-            void get_user_data(void);
-            void get_username(void);
-            void get_user_color(void);
-            // void print_username(void) { std::cout << color << UserData.username << my_cpp::WHITE; }
+        public:
+            void getUserData(void);
+            void getUsername(void);
+            void getUserColor(void);
+            //void send_msg(void);
+            // void print_username(void) { std::cout << UserData.color << UserData.username << my_cpp::WHITE; }
 
             net::Client Client;
             Data_t UserData;

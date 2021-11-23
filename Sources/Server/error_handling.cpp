@@ -14,11 +14,11 @@ static void print_help(void)
 	std::cout <<
 	"This is the server side of ShellChat.\n" <<
 	"Usage :\n" <<
-		"\t./ShellChat_server [IP_ADRESS] [PORT] [-OPTION]\n" <<
+		"\t./ShellChat_server [IP_ADDRESS] [PORT] [-OPTION]\n" <<
 	"\n" <<
 	"Options :\n" <<
 		"\t-h --help 	Display help.\n" <<
-		"\t-a --auto	Find host ip adress and available port.\n" <<
+		"\t-a --auto	Find host ip address and available port.\n" <<
 		"\t-s --silent	No sound.\n";
 }
 
@@ -61,7 +61,7 @@ static void check_args(int const argc, char **argv, shellchat::Host::Data_t *Hos
 				// goes auto;
 			}
 		}
-		// strcpy(HostData->IP_ADRESS, argv[1]);
+		// strcpy(HostData->IP_ADDRESS, argv[1]);
 		// HostData->PORT = (int)(my_cpp::get_integer(argv[2]));
 	}
 	// host_settings(HostData);

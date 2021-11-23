@@ -12,13 +12,19 @@ namespace shellchat
 
 		public:
 			typedef struct Data_s {
-				char *IP_ADRESS;
+				char *IP_ADDRESS;
 				unsigned int PORT;
-				unsigned int MAX_CLIENT; // = 50;
+				unsigned int MAX_CLIENT;
 			} Data_t;
 
-			net::Server Server; // do the friend thing where you can call the Server class method directly in Host class
 			Data_t HostData;
+			net::Server Server; // do the friend thing where you can call the Server class method directly in Host class
+			std::vector<net::Client> AllClients;
+
+			void getHostIp(void);
+			void generatePort(void);
+			void hostSettings(void);
+			void sendToAll(net::Client *Client);
 
 			Host() {/**/}
 			~Host() {/*free what to free*/}

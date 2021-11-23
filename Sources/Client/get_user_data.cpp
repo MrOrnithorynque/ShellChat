@@ -10,7 +10,7 @@
 
 #include "client.hpp"
 
-void shellchat::User::get_username(void)
+void shellchat::User::getUsername(void)
 {
 	std::string user_input;
 
@@ -31,7 +31,7 @@ void shellchat::User::get_username(void)
 	}
 }
 
-void shellchat::User::get_user_color(void)
+void shellchat::User::getUserColor(void)
 {
 	char *user_colors[] = {"white", "red", "yellow", "blue", "purple", NULL};
 	std::string user_input;
@@ -54,10 +54,10 @@ void shellchat::User::get_user_color(void)
 	}
 }
 
-void shellchat::User::get_user_data(void)
+void shellchat::User::getUserData(void)
 {
-	get_username();
-	get_user_color();
+	getUsername();
+	getUserColor();
 
 	std::cout << "Hello " << UserData.username << " welcome to ShellChat.\n";
 }

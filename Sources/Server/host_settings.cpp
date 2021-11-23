@@ -25,16 +25,16 @@ void shellchat::host_settings(shellchat::Host::Data_t *HostData)
 {
 	std::string user_input;
 
-	std::cout << "Enter your ip adress (write it like that : \"x.x.x.x\") :\n";
+	std::cout << "Enter your ip address (write it like that : \"x.x.x.x\") :\n";
 	std::getline(std::cin, user_input);
 
 	if (user_input[0] == '\0')
 	{
-		get_host_ip(HostData->IP_ADRESS);
+		get_host_ip(HostData->IP_ADDRESS);
 	}
 	else
 	{
-		// strcpy(HostData->IP_ADRESS, user_input.c_str);
+		// strcpy(HostData->IP_ADDRESS, user_input.c_str);
 	}
 
 	std::cout << "Enter the port of your server (Default is random) :\n";
