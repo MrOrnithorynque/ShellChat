@@ -27,10 +27,14 @@ __But, which games ?__ </br>
   - Connect4
   - Tron
   - CityBomber (RTX EDITION)
+  - Navy
   - And maybe a SFML game.
  
 ## Windows/Mac/Linux compatibility
 I want to dockerise the app, I'm not sure if I will take the time to do it but for the moment it is in a side of my head.
+
+## Better interface
+I will still keep a minimalist shell-like interface but probably give it a little bit more character.
 
 # Doc
 ## ShellChat_server
