@@ -12,9 +12,9 @@ namespace shellchat
 
 		public:
 			typedef struct Data_s {
-				const char *IP_ADRESS;
-				const unsigned int PORT;
-				const unsigned int MAX_CLIENT; // = 50;
+				char *IP_ADRESS;
+				unsigned int PORT;
+				unsigned int MAX_CLIENT; // = 50;
 			} Data_t;
 
 			net::Server Server; // do the friend thing where you can call the Server class method directly in Host class
@@ -25,7 +25,7 @@ namespace shellchat
 	}; // class Host
 
 	void client_thread(net::Client Client);
-	void error_handling(int const argc, char **argv, Host.Data_t *HostData);
+	void error_handling(int const argc, char **argv, Host::Data_t *HostData);
 	void handle_client(net::Server *Server);
-	void host_settings(Host.Data_t *Host);
+	void host_settings(Host::Data_t *Host);
 } // namespace shellchat

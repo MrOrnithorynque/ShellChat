@@ -29,7 +29,7 @@ all:
 make_lib: $(OBJ)
 	ar rc $(LIB_NAME) $(OBJ)
 	cp $(LIB_NAME) ../
-	cp -t $(INCLUDE_PATH) $(INCLUDES)
+	cp -r $(INCLUDES) $(INCLUDE_PATH) 
 
 clean:
 	$(RM) $(OBJ)

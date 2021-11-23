@@ -3,17 +3,17 @@
 */
 
 #include <iostream>
-#include <stdlib.h>
+#include <cstring>
 
 #include "server.hpp"
 
-static void get_host_ip(const char *IP_ADRESS)
+static void get_host_ip(char *IP_ADRESS)
 {
 	// cmd("hostname -I");
 	return;
 }
 
-static void generate_port(const unsigned int *PORT)
+static void generate_port(unsigned int *PORT)
 {
 	unsigned int test_port = 1;
 
@@ -21,7 +21,7 @@ static void generate_port(const unsigned int *PORT)
 	*PORT = test_port;
 }
 
-void shellchat::host_settings(shellchat::Host.Data_t *HostData)
+void shellchat::host_settings(shellchat::Host::Data_t *HostData)
 {
 	std::string user_input;
 
@@ -34,7 +34,7 @@ void shellchat::host_settings(shellchat::Host.Data_t *HostData)
 	}
 	else
 	{
-		HostData->IP_ADRESS = user_input.c_str;
+		// strcpy(HostData->IP_ADRESS, user_input.c_str);
 	}
 
 	std::cout << "Enter the port of your server (Default is random) :\n";
