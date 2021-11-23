@@ -15,7 +15,7 @@ void shellchat::send_msg_thread(net::Client *Client, shellchat::UserData_t *MyCl
     while (true)
     {
         std::cout << "> ";
-        std::cin >> user_input;
+        std::getline(std::cin, user_input);
 
         if (user_input.length() > 200)
         {
