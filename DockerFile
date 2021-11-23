@@ -1,11 +1,20 @@
-FROM ubuntu
+FROM alpine
 
+# CREATE WORK DIRECTORY AND COPY SHELLCHAT FILES TO WORK DIR
 WORKDIR /ShellChat
 
 COPY . /ShellChat
 
-RUN apt-get update
+# UPDATE
+RUN apk update
 
-RUN apt install build-essential
+# ADDING DEPENDENCIES
+RUN apk add --no-cache bash
+RUN apk add --no-cache g++
+RUN apk add --no-cache make 
+RUN apk add --no-cache ncurses-libs
 
-RUN apt-get install libncurses5-dev
+# BUILD PROJECT
+RUN make
+
+# EXECUTE PROJECT (EXP)
