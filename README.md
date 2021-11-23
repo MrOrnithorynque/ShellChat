@@ -27,6 +27,7 @@ __But, which games ?__ </br>
   - Connect4
   - Tron
   - CityBomber (RTX EDITION)
+  - Navy
   - And maybe a SFML game.
  
 ## Windows/Mac/Linux compatibility
