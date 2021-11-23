@@ -22,6 +22,6 @@ void client_verification(std::vector<net::Client> AllClients_p) // ptr to vector
 			AllClients_p[i] = AllClients_p[size - 1];
 			AllClients_p.pop_back();
 		}
-		sleep(100000);
+		sleep(1);
 	}
 }
