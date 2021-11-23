@@ -12,7 +12,7 @@ RUN apk update
 RUN apk add --no-cache bash
 RUN apk add --no-cache g++
 RUN apk add --no-cache make 
-RUN apk add --no-cache ncurses-libs
+RUN apk add --no-cache ncurses-dev
 
 # BUILD PROJECT
 RUN make
