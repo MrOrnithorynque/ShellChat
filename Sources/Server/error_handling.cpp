@@ -48,10 +48,8 @@ static void check_args(int const argc, char **argv, shellchat::Host::Data_t *Hos
 	}
 	else if (argc < 2)
 	{
-		else
-		{
-			// find ip
-		}
+		// find ip
+
 		for (size_t i = 0; i < argc; ++i)
 		{
 			if (strcmp(argv[i], "--silent") == 0 || strcmp(argv[i], "-s") == 0)

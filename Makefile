@@ -42,6 +42,6 @@ build_docker:
 	docker build -t shellchat-docker .
 
 run_docker:
-	docker run shellchat-docker
+	docker run -it shellchat-docker
 
 .PHONY: all make_libs clean fclean re run docker build_docker run_docker
