@@ -34,4 +34,14 @@ re:
 run:
 	make run -C $(SRCS_PATH)
 
-.PHONY: all make_libs clean fclean re run
+docker:
+	make build_docker
+	make run_docker
+
+build_docker:
+	docker build -t shellchat-docker .
+
+run_docker:
+	docker run shellchat-docker
+
+.PHONY: all make_libs clean fclean re run docker build_docker run_docker
