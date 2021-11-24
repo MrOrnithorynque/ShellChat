@@ -27,9 +27,11 @@ namespace shellchat
 			net::Server Server; // do the friend thing where you can call the Server class method directly in Host class
 			std::vector<net::Client> AllClients;
 
+			void bind(void);
 			void getHostIp(void);
 			void generatePort(void);
 			void hostSettings(void);
+			void listen(void);
 			void sendToAll(net::Client *Client, UserData_t *UserData);
 
 			bool stop_server;

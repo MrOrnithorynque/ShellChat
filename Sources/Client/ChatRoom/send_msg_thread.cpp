@@ -9,7 +9,7 @@
 #include "client.hpp"
 #include "my_cpp.hpp"
 
-void shellchat::send_msg_thread(net::Client *Client, shellchat::UserData_t *MyClientData)
+void shellchat::send_msg_thread(shellchat::User *User)
 {
     std::string user_input;
 
@@ -24,15 +24,16 @@ void shellchat::send_msg_thread(net::Client *Client, shellchat::UserData_t *MyCl
         } // else command
         else if (user_input.compare("exit") == 0)
         {
-            bzero(MyClientData->client_msg, 200);
+            bzero(User->UserData.user_msg, 200);
 
             break;
         }
         else
         {
-            strncpy(MyClientData->client_msg, user_input.c_str(), 200);
-            send(Client->ClientData.socket_client, MyClientData, sizeof(*MyClientData), 0);
-            bzero(MyClientData->client_msg, 200);
+            strncpy(User->UserData.user_msg, user_input.c_str(), 200);
+            User.send()
+            //send(User->Client.ClientData.socket_client, &User->UserData, sizeof(User->UserData), 0);
+            bzero(User->UserData.user_msg, 200);
         }
 
         usleep(500000);

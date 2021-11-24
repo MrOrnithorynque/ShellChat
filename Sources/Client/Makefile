@@ -13,11 +13,11 @@ LDFLAGS 	= 	-L../../Libraries/
 LDLIBS 		=	-lmy_cpp -lnetwork -pthread -lncurses
 
 SRCS		=	main.cpp								\
-				chat_room.cpp							\
 				create_random_username.cpp 				\
 				get_server_verification.cpp 			\
-				recv_msg_thread.cpp						\
-				send_msg_thread.cpp						\
+				ChatRoom/chat_room.cpp					\
+				ChatRoom/recv_msg_thread.cpp			\
+				ChatRoom/send_msg_thread.cpp			\
 				Games/CityBomber/main.cpp 				\
 				Games/CityBomber/recv_game_data.cpp 	\
 				Games/CityBomber/render_game.cpp 		\

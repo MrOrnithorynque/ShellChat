@@ -11,5 +11,4 @@
 void shellchat::User::sendUserMsg(void)
 {
 	send(Client.ClientData.socket_client, &UserData, sizeof(UserData), 0);
-    bzero(UserData.user_msg, MAX_MSG_LENGHT);
 }

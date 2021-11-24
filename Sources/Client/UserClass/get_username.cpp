@@ -12,14 +12,15 @@ void shellchat::User::getUsername(void)
 
 	if (user_input[0] == '\0')
 	{
-		strncpy(UserData.username, shellchat::create_random_username(), 20);
+		strcpy(UserData.username, shellchat::create_random_username());
 	}
 	else if (user_input.length() > 30)
 	{
-		return;
+		std::cout << "Your username is too long (max is " << MAX_USERNAME_LENGTH << " characters).\n";
+		getUsername();
 	}
 	else
 	{
-		strncpy(UserData.username, user_input.c_str(), 20);
+		strcpy(UserData.username, user_input.c_str());
 	}
 }

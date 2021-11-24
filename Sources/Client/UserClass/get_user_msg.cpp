@@ -18,6 +18,7 @@ void shellchat::User::getUserMsg(void)
 	if (user_input.length() > MAX_MSG_LENGTH)
     {
         std::cout << "message above " << MAX_MSG_LENGTH <<" characters are forbiden.\n";
+        getUserMsg();
     } // else command
     else if (user_input.compare("exit") == 0)
     {

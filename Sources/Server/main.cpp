@@ -21,13 +21,16 @@ int main(int const argc, char **argv)
     std::cout << "Launching server ...\n";
     net::Server Server;
 
+    // Host.bind();
     net::check(bind(Server.ServerData.socket_server, (SOCKADDR *) &Server.ServerData.addr_server, sizeof(Server.ServerData.addr_server)), \
                 "Bind error.\n");
+    // Host.listen();
     net::check(listen(Server.ServerData.socket_server, MAX_CLIENTS), \
                 "Listen error.\n");
 
     shellchat::handle_client(&Server);
 
+    // Host.Server.closeServer();
     Server.closeServer();
 
     return 0;

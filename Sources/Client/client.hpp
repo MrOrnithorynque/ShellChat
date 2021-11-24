@@ -6,8 +6,11 @@
 
 namespace shellchat
 {
-    const unsigned short MAX_MSG_LENGTH      = 400;
-    const unsigned short MAX_USERNAME_LENGTH = 30;
+    const unsigned short MAX_MSG_LENGTH         = 400;
+    const unsigned short MAX_USERNAME_LENGTH    = 30;
+
+    const unsigned int CONNECTED    = 1;
+    const unsigned int DISCONNECTED = -1;
 
     class User
     {
@@ -19,8 +22,9 @@ namespace shellchat
             typedef struct Data_s {
                 char user_msg[MAX_MSG_LENGTH];
                 char username[MAX_USERNAME_LENGTH];
-                //my_cpp::COLOR_FLAG color;
                 char *color;
+                //my_cpp::COLOR_FLAG color;
+                // int status;
             } Data_t;
             Data_t UserData;
 
@@ -37,8 +41,8 @@ namespace shellchat
     }; // class User
 
     char            *create_random_username(void);
-    void            chat_room(net::Client *Client);
+    void            chat_room(User *User);
     unsigned int    get_server_verification(net::Client *Client);
-    void            recv_msg_thread(net::Client *Client);
-    void            send_msg_thread(net::Client *Client, UserData_t *MyClientData);
+    void            recv_msg_thread(User *User);
+    void            send_msg_thread(User *User);
 } // namespace shellchat
