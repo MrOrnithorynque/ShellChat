@@ -3,6 +3,8 @@
 #include <vector>
 
 #include "network.hpp"
+#include "shellchat.hpp"
+#include "client.hpp"
 
 const int AUTO 		= 1;
 const int MANUAL	= 0;
@@ -18,6 +20,7 @@ namespace shellchat
 				char *IP_ADDRESS;
 				unsigned int PORT;
 				unsigned int MAX_CLIENT;
+				unsigned int MAX_MSG_LENGTH;
 			} Data_t;
 			Data_t HostData;
 
@@ -27,9 +30,11 @@ namespace shellchat
 			void getHostIp(void);
 			void generatePort(void);
 			void hostSettings(void);
-			void sendToAll(net::Client *Client);
+			void sendToAll(net::Client *Client, UserData_t *UserData);
 
-			Host() {/**/}
+			bool stop_server;
+
+			Host() { stop_server = false; }
 			~Host() {/*free what to free*/}
 	}; // class Host
 

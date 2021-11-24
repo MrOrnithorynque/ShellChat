@@ -1,8 +1,9 @@
 #include <iostream>
 
+#include "shellchat.hpp"
 #include "server.hpp"
 
-void shellchat::Host::sendToAll(net::Client *Client)
+void shellchat::Host::sendToAll(net::Client *Client, shellchat::UserData_t UserData)
 {
     size_t size = AllClients.size();
 
@@ -11,7 +12,7 @@ void shellchat::Host::sendToAll(net::Client *Client)
         if (AllClients[i].ClientData.socket_client != Client->ClientData.socket_client)
         {
             std::cout << "sending to " << AllClients[i].ClientData.socket_client << std::endl;
-            send(AllClients[i].ClientData.socket_client, &HostData, sizeof(HostData), 0);
+            send(AllClients[i].ClientData.socket_client, &UserData, sizeof(UserData), 0);
         }
     }
 }

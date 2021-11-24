@@ -2,6 +2,7 @@
 #include <vector>
 
 #include "my_cpp.hpp"
+#include "shellchat.hpp"
 #include "server.hpp"
 #include "client.hpp"
 
@@ -24,9 +25,9 @@ static void send_to_all(net::Client *Client, shellchat::UserData_t *MyClientData
 
 void shellchat::client_thread(net::Client Client)
 {
+    size_t vector_size = AllClients.size();
     shellchat::UserData_t MyClientData;
     int recv_value;
-    size_t vector_size = AllClients.size();
 
     AllClients.push_back(Client);
 

@@ -6,6 +6,7 @@
 
 #include <thread>
 
+#include "shellchat.hpp"
 #include "client.hpp"
 
 // no client, net::client into UserData_t *MyClientData;

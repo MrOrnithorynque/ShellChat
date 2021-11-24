@@ -5,6 +5,7 @@
 #include <iostream>
 #include <cstring>
 
+#include "shellchat.hpp"
 #include "client.hpp"
 #include "my_cpp.hpp"
 

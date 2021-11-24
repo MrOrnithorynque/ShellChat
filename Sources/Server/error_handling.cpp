@@ -58,7 +58,7 @@ static void check_args(int const argc, char **argv, shellchat::Host::Data_t *Hos
 			}
 			else if (strcmp(argv[i], "--auto") == 0 || strcmp(argv[i], "-a") == 0)
 			{
-				// goes auto;
+				// host_settings(AUTO);
 			}
 		}
 		// strcpy(HostData->IP_ADDRESS, argv[1]);

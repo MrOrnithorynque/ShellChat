@@ -2,25 +2,24 @@
 **
 */
 
-#include <pthread.h>
 #include <iostream>
 #include <cstring>
 
-#include "my_cpp.hpp"
+#include "shellchat.hpp"
 #include "client.hpp"
 
 void shellchat::recv_msg_thread(net::Client *Client)
 {
-    shellchat::UserData_t MsgData;
+    shellchat::UserData_t UserData;
     int recv_value;
 
     while (true)
     {
-        recv_value = recv(Client->ClientData.socket_client, &MsgData, sizeof(MsgData), 0);
+        recv_value = recv(Client->ClientData.socket_client, &UserData, sizeof(UserData), 0);
 
         if (recv_value > 0)
         {
-            std::cout << MsgData.username << " : " << MsgData.client_msg << std::endl;
+            std::cout << UserData.username << " : " << UserData.client_msg << std::endl;
         }
         else if (recv_value == 0)
         {
