@@ -32,7 +32,7 @@ namespace shellchat
 			void generatePort(void);
 			void hostSettings(void);
 			void listen(void);
-			void sendToAll(net::Client *Client, UserData_t *UserData);
+			void sendToAll(SOCKET sender_socket, UserData_t *UserData);
 
 			bool stop_server;
 
@@ -44,4 +44,5 @@ namespace shellchat
 	void error_handling(int const argc, char **argv, Host::Data_t *HostData);
 	void handle_client(net::Server *Server);
 	void host_settings(Host::Data_t *Host);
+	bool command(Host *Host, net::Client *Client)
 } // namespace shellchat

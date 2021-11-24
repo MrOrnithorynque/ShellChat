@@ -15,10 +15,11 @@ LDLIBS 		=	-lmy_cpp -lnetwork -pthread -lncurses
 SRCS		=	main.cpp								\
 				client_thread.cpp 						\
 				client_verification.cpp 				\
-				command.cpp 							\
 				error_handling.cpp 						\
 				handle_client.cpp						\
 				host_settings.cpp 						\
+				Command/command.cpp						\
+				Command/pv_msg.cpp 						\
 				Games/CityBomber/main.cpp 				\
 				Games/CityBomber/recv_input.cpp			\
 				Games/CityBomber/render_game.cpp 		\

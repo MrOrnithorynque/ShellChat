@@ -6,7 +6,7 @@
 #include "server.hpp"
 #include "client.hpp"
 
-void shellchat::Host::clientThread(net::Client Client, shellchat::UserData_t *UserData)
+void shellchat::Host::clientThread(net::Client Client)
 {
     size_t vector_size = AllClients.size();
     shellchat::UserData_t UserData;
@@ -26,7 +26,7 @@ void shellchat::Host::clientThread(net::Client Client, shellchat::UserData_t *Us
             // if (!command(UserData.client_msg)) {
             std::cout << UserData.username << " : " << UserData.client_msg << std::endl;
 
-            sendToAll(&Client, &UserData);
+            sendToAll(Client.ClientData.socket_client, UserData);
             bzero(&UserData.client_msg, 200);
         }
         else if (recv_value == 0)
