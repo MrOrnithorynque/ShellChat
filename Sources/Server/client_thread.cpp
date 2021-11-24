@@ -42,7 +42,6 @@ void shellchat::client_thread(net::Client Client)
             // if (!command(MyClientData.client_msg)) {
             std::cout << MyClientData.username << " : " << MyClientData.client_msg << std::endl;
 
-            // should be function send_to_all();
             send_to_all(&Client, &MyClientData);
             bzero(&MyClientData.client_msg, 200);
         }

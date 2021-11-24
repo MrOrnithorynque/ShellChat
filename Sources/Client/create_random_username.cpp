@@ -26,6 +26,7 @@ const char *r2_name[] =
 	"female",	"homosexuality",	NULL
 };
 
+// VALGRIND 100 ERROR MUST FIX
 char *shellchat::create_random_username(void)
 {
 	unsigned int name_1 	= rand() % 11; // my_cpp::array_2d_len(r1_name);

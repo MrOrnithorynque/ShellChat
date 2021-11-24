@@ -4,6 +4,9 @@
 
 #include "network.hpp"
 
+const int AUTO 		= 1;
+const int MANUAL	= 0;
+
 namespace shellchat
 {
 	class Host
@@ -16,8 +19,8 @@ namespace shellchat
 				unsigned int PORT;
 				unsigned int MAX_CLIENT;
 			} Data_t;
-
 			Data_t HostData;
+
 			net::Server Server; // do the friend thing where you can call the Server class method directly in Host class
 			std::vector<net::Client> AllClients;
 

@@ -71,22 +71,8 @@ namespace net
 
     class Server
     {
-        public:
-            typedef struct Data_s {
-                SOCKET socket_server;
-                SOCKADDR_IN addr_server;
-            } Data_t;
-            Data_t ServerData;
-
-            void waitClientConnection(Client::Data_t *ClientData);
-            void closeServer(void);
-
-            Server() { serverData(); }
-            ~Server() {}
-
         private:
             char *ip_address;
-
             inline void serverData(void)
             {
                 ServerData.addr_server.sin_family      = AF_INET;
@@ -95,5 +81,19 @@ namespace net
                 ServerData.socket_server               = create_socket();
             }
 
+        public:
+            typedef struct Data_s {
+                SOCKET socket_server;
+                SOCKADDR_IN addr_server;
+            } Data_t;
+            Data_t ServerData;
+
+            void closeServer(void);
+            template <T>
+            int send(SOCKET socket, T *buf, int flag = 0);
+            void waitClientConnection(Client::Data_t *ClientData);
+
+            Server() { serverData(); }
+            ~Server() {}
     }; // class server
 } // namespace net

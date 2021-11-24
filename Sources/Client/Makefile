@@ -16,7 +16,6 @@ SRCS		=	main.cpp								\
 				chat_room.cpp							\
 				create_random_username.cpp 				\
 				get_server_verification.cpp 			\
-				get_user_data.cpp 						\
 				recv_msg_thread.cpp						\
 				send_msg_thread.cpp						\
 				Games/CityBomber/main.cpp 				\
@@ -31,6 +30,11 @@ SRCS		=	main.cpp								\
 				Games/NeTron/recv_game_data.cpp 		\
 				Games/NeTron/render_game.cpp 			\
 				Games/NeTron/send_input.cpp 			\
+				UserClass/get_user_color.cpp			\
+				UserClass/get_user_data.cpp 			\
+				UserClass/get_user_msg.cpp 				\
+				UserClass/get_username.cpp				\
+				UserClass/send_user_msg.cpp				\
 
 OBJ			=	$(SRCS:.cpp=.o)
 

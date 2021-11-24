@@ -15,6 +15,7 @@ SRCS		=	Socket/create_socket.cpp 				\
 				ClassClient/connect_client.cpp			\
 				ClassClient/exit_client.cpp				\
 				ClassServer/close_server.cpp			\
+				ClassServer/send.cpp 					\
 				ClassServer/wait_client_connection.cpp	\
 				SendData/m_send.cpp 					\
 

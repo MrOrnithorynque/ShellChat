@@ -5,3 +5,5 @@
 */
 
 #include "server.hpp"
+
+bool command() { return false; }
