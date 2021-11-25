@@ -1,0 +1,5 @@
+Binaries/
+Includes/
+.vscode/
+*.o
+*.a
