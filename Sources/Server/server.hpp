@@ -33,7 +33,8 @@ namespace shellchat
 			void generatePort(void);
 			void hostSettings(int flag);
 			void listenTo(void);
-			template <typename T> void sendToAll(SOCKET sender_socket, T Data);
+			template <typename T>
+			void sendToAll(SOCKET sender_socket, T Data);
 
 			bool stop_server;
 
@@ -41,9 +42,9 @@ namespace shellchat
 			~Host() {/*free what to free*/}
 	}; // class Host
 
-	void client_thread(net::Client Client);
+	void client_thread(shellchat::Host *Host, net::Client Client);
 	void error_handling(int const argc, char **argv, Host::Data_t *HostData);
-	void handle_client(net::Server *Server);
+	void handle_client(shellchat::Host *Host);
 	void host_settings(Host::Data_t *Host);
 	bool command(Host *Host, net::Client *Client, UserData_s *UserData);
 } // namespace shellchat

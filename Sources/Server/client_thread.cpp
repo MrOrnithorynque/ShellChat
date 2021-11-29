@@ -23,35 +23,36 @@ static void send_to_all(net::Client *Client, shellchat::UserData_t *MyClientData
     }
 }
 
-void shellchat::client_thread(net::Client Client)
+void shellchat::client_thread(shellchat::Host *Host, net::Client Client)
 {
-    size_t vector_size = AllClients.size();
-    shellchat::UserData_t MyClientData;
+    size_t vector_size = Host->AllClients.size();
+    shellchat::UserData_t UserData;
     int recv_value;
 
-    AllClients.push_back(Client);
+    Host->AllClients.push_back(Client);
 
     // std::thread client_verification_thread(client_verification, &AllClients);
     // client_verification_thread.join();
 
     while (!stop_server)
     {
-        recv_value = recv(Client.ClientData.socket_client, &MyClientData, sizeof(UserData_t), 0);
+        recv_value = recv(Client.ClientData.socket_client, &UserData, sizeof(UserData_t), 0);
 
         if (recv_value > 0)
         {
-            // if (!command(MyClientData.client_msg)) {
-            std::cout << MyClientData.username << " : " << MyClientData.client_msg << std::endl;
+            // if (!command(UserData.client_msg)) {
+            std::cout << UserData.username << " : " << UserData.client_msg << std::endl;
 
-            send_to_all(&Client, &MyClientData);
-            bzero(&MyClientData.client_msg, 200);
+            Host->sendToAll(Client.ClientData.socket_client, UserData);
+            bzero(&UserData.client_msg, 200);
         }
         else if (recv_value == 0)
         {
-            std::cout << MyClientData.username << " left.\n";
+            std::cout << "client left\n";
+
+            std::swap(Host->AllClients[vector_size], Host->AllClients[Host->AllClients.size()]);
+            Host->AllClients.pop_back();
             stop_server = true;
-            std::swap(AllClients[vector_size], AllClients[AllClients.size()]);
-            AllClients.pop_back();
         }
         /*
         else
@@ -60,4 +61,5 @@ void shellchat::client_thread(net::Client Client)
         }
         */
     }
+    std::terminate();
 }
