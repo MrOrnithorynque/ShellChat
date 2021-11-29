@@ -5,6 +5,7 @@
 */
 
 #include <iostream>
+#include <cstring>
 
 #include "client.hpp"
 
@@ -23,7 +24,7 @@ void shellchat::User::getUserMsg(void)
     else if (user_input.compare("exit") == 0)
     {
         bzero(UserData.user_msg, MAX_MSG_LENGTH);
-        break;
+        return;;
     }
     else
     {

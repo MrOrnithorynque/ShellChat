@@ -1,0 +1,5 @@
+*.o
+*.a
+Binaries/
+Includes/
+*.json

@@ -48,7 +48,7 @@ void shellchat::client_thread(net::Client Client)
         }
         else if (recv_value == 0)
         {
-            std::cout << "client left\n";
+            std::cout << MyClientData.username << " left.\n";
             stop_server = true;
             std::swap(AllClients[vector_size], AllClients[AllClients.size()]);
             AllClients.pop_back();

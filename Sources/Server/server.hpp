@@ -27,12 +27,13 @@ namespace shellchat
 			net::Server Server; // do the friend thing where you can call the Server class method directly in Host class
 			std::vector<net::Client> AllClients;
 
-			void bind(void);
+			void bindTo(void);
+			void clientThread(net::Client Client);
 			void getHostIp(void);
 			void generatePort(void);
-			void hostSettings(void);
-			void listen(void);
-			void sendToAll(SOCKET sender_socket, UserData_t *UserData);
+			void hostSettings(int flag);
+			void listenTo(void);
+			template <typename T> void sendToAll(SOCKET sender_socket, T Data);
 
 			bool stop_server;
 
@@ -44,5 +45,5 @@ namespace shellchat
 	void error_handling(int const argc, char **argv, Host::Data_t *HostData);
 	void handle_client(net::Server *Server);
 	void host_settings(Host::Data_t *Host);
-	bool command(Host *Host, net::Client *Client)
+	bool command(Host *Host, net::Client *Client, UserData_s *UserData);
 } // namespace shellchat

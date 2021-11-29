@@ -1,4 +1,5 @@
 #include "server.hpp"
+#include "command.hpp"
 
 void shellchat::cmd::pv_msg(shellchat::Host *Host, SOCKET recever_socket)
 {

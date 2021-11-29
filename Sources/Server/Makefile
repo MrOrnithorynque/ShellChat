@@ -32,11 +32,11 @@ SRCS		=	main.cpp								\
 				Games/NeTron/recv_input.cpp				\
 				Games/NeTron/render_game.cpp 			\
 				Games/NeTron/send_game_data.cpp 		\
-				HostClass/bind.cpp 						\
+				HostClass/bind_to.cpp 					\
 				HostClass/generate_port.cpp 			\
 				HostClass/get_host_ip.cpp 				\
 				HostClass/host_settings.cpp				\
-				HostClass/listen.cpp 					\
+				HostClass/listen_to.cpp 				\
 				HostClass/send_to_all.cpp				\
 
 OBJ			=	$(SRCS:.cpp=.o)

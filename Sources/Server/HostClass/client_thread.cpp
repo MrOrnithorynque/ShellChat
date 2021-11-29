@@ -26,7 +26,7 @@ void shellchat::Host::clientThread(net::Client Client)
             // if (!command(UserData.client_msg)) {
             std::cout << UserData.username << " : " << UserData.client_msg << std::endl;
 
-            sendToAll(Client.ClientData.socket_client, UserData);
+            sendToAll(Client.ClientData.socket_client, &UserData);
             bzero(&UserData.client_msg, 200);
         }
         else if (recv_value == 0)
@@ -44,4 +44,5 @@ void shellchat::Host::clientThread(net::Client Client)
         }
         */
     }
+    std::terminate();
 }
