@@ -10,5 +10,6 @@
 
 void shellchat::User::sendUserMsg(void)
 {
-	send(Client.ClientData.socket_client, &UserData, sizeof(UserData), 0);
+	std::cout << UserData.username << " : " << UserData.user_msg << std::endl;
+	send(Client.ClientData.socket_client, &UserData, sizeof(shellchat::User::Data_t), 0);
 }

@@ -17,7 +17,6 @@ void shellchat::handle_client(shellchat::Host *Host)
         std::cout << "Accept client : " << Client.ClientData.socket_client << "\n";
 
         std::thread ClientThread(shellchat::client_thread, Host, Client);
-        //std::thread ClientThread(Host->clientThread, Client);
         ClientThread.detach();
     }
 }

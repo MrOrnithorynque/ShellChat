@@ -24,7 +24,9 @@ namespace shellchat
                 // int status;
             } Data_t;
             Data_t UserData;
+            Data_t ExternUserData;
 
+            void changeUsername(void);
             void getUserColor(void);
             void getUserData(void);
             void getUserMsg(void);

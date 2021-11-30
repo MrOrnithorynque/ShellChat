@@ -28,12 +28,13 @@ namespace shellchat
 			std::vector<net::Client> AllClients;
 
 			void bindTo(void);
-			void clientThread(net::Client Client);
 			void getHostIp(void);
 			void generatePort(void);
 			void hostSettings(int flag);
 			void listenTo(void);
 			void sendToAll(SOCKET sender_socket, UserData_t *UserData);
+			void displayClientsSocket(void);
+			int recvClientMsg(net::Client *Client, shellchat::UserData_t *UserData);
 
 			bool stop_server;
 

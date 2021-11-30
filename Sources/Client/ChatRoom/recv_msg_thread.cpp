@@ -14,11 +14,11 @@ void shellchat::recv_msg_thread(shellchat::User *User)
 
     while (!User->stop_chat)
     {
-        recv_value = recv(User->Client.ClientData.socket_client, &User->UserData, sizeof(User->UserData), 0);
+        recv_value = recv(User->Client.ClientData.socket_client, &User->ExternUserData, sizeof(shellchat::User::Data_t), 0);
 
         if (recv_value > 0)
         {
-            std::cout << User->UserData.username << " : " << User->UserData.user_msg << std::endl;
+            std::cout << User->ExternUserData.username << " : " << User->ExternUserData.user_msg << std::endl;
         }
         else if (recv_value == 0)
         {
