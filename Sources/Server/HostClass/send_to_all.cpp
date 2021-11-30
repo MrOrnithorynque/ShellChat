@@ -3,8 +3,7 @@
 #include "shellchat.hpp"
 #include "server.hpp"
 
-template <typename T>
-void shellchat::Host::sendToAll(SOCKET sender_socket, T Data)
+void shellchat::Host::sendToAll(SOCKET sender_socket, shellchat::UserData_t *UserData)
 {
     size_t size = AllClients.size();
 
@@ -13,7 +12,7 @@ void shellchat::Host::sendToAll(SOCKET sender_socket, T Data)
         if (AllClients[i].ClientData.socket_client != sender_socket)
         {
             std::cout << "sending to " << AllClients[i].ClientData.socket_client << std::endl;
-            send(AllClients[i].ClientData.socket_client, &Data, sizeof(Data), 0);
+            send(AllClients[i].ClientData.socket_client, UserData, sizeof(*UserData), 0);
         }
     }
 }

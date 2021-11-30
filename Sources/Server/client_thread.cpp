@@ -6,23 +6,6 @@
 #include "server.hpp"
 #include "client.hpp"
 
-bool stop_server = false;
-std::vector<net::Client> AllClients;
-
-static void send_to_all(net::Client *Client, shellchat::UserData_t *MyClientData)
-{
-    size_t size = AllClients.size();
-
-    for (size_t i = 0; i < size; ++i)
-    {
-        if (AllClients[i].ClientData.socket_client != Client->ClientData.socket_client)
-        {
-            std::cout << "sending to " << AllClients[i].ClientData.socket_client << std::endl;
-            send(AllClients[i].ClientData.socket_client, MyClientData, sizeof(*MyClientData), 0);
-        }
-    }
-}
-
 void shellchat::client_thread(shellchat::Host *Host, net::Client Client)
 {
     size_t vector_size = Host->AllClients.size();
@@ -34,7 +17,7 @@ void shellchat::client_thread(shellchat::Host *Host, net::Client Client)
     // std::thread client_verification_thread(client_verification, &AllClients);
     // client_verification_thread.join();
 
-    while (!stop_server)
+    while (!Host->stop_server)
     {
         recv_value = recv(Client.ClientData.socket_client, &UserData, sizeof(UserData_t), 0);
 
@@ -43,23 +26,23 @@ void shellchat::client_thread(shellchat::Host *Host, net::Client Client)
             // if (!command(UserData.client_msg)) {
             std::cout << UserData.username << " : " << UserData.client_msg << std::endl;
 
-            Host->sendToAll(Client.ClientData.socket_client, UserData);
-            bzero(&UserData.client_msg, 200);
+            Host->sendToAll(Client.ClientData.socket_client, &UserData);
+            bzero(&UserData.client_msg, 400);
         }
         else if (recv_value == 0)
         {
             std::cout << "client left\n";
 
-            std::swap(Host->AllClients[vector_size], Host->AllClients[Host->AllClients.size()]);
+            std::cout << Host->AllClients[vector_size].ClientData.socket_client << " " << Host->AllClients[Host->AllClients.size()- 1].ClientData.socket_client << std::endl;
+            std::swap(Host->AllClients[vector_size], Host->AllClients[Host->AllClients.size() - 1]);
+            std::cout << Host->AllClients[vector_size].ClientData.socket_client << " " << Host->AllClients[Host->AllClients.size()- 1].ClientData.socket_client << std::endl;
             Host->AllClients.pop_back();
-            stop_server = true;
+            Host->stop_server = true;
         }
-        /*
         else
         {
-            stop_server = true;
+            Host->stop_server = true;
         }
-        */
     }
     std::terminate();
 }
