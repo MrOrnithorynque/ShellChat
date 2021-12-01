@@ -13,7 +13,7 @@
 #include "server.hpp"
 #include "command.hpp"
 
-bool shellchat::command(shellchat::Host *Host, net::Client *Client, shellchat::UserData_s *UserData)
+bool slct::command(slct::Host *Host, net::Client *Client, slct::UserData_s *UserData)
 {
 	char **user_cmd;
 	char *user_msg = strcpy(user_msg, UserData->client_msg);
@@ -23,12 +23,12 @@ bool shellchat::command(shellchat::Host *Host, net::Client *Client, shellchat::U
 		//user_msg = my_cpp::offset_array(user_msg, 0, strlen(user_msg));
 		//user_cmd = my_cpp::str_to_2d_array(user_msg, " ");
 
-		for (size_t i = 0; i < shellchat::cmd::ALL_CMD_LENGTH; ++i)
+		for (size_t i = 0; i < slct::cmd::ALL_CMD_LENGTH; ++i)
 		{
 			/*
-			if (strcmp(shellchat::cmd::all_cmd[i], user_cmd[0]) == 0)
+			if (strcmp(slct::cmd::all_cmd[i], user_cmd[0]) == 0)
 			{
-				//shellchat::cmd::all_cmd_function[i]();
+				//slct::cmd::all_cmd_function[i]();
 				return true;
 			}
 			*/

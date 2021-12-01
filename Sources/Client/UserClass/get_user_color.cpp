@@ -9,7 +9,7 @@
 
 #include "client.hpp"
 
-void shellchat::User::getUserColor(void)
+void slct::User::getUserColor(void)
 {
 	char *user_colors[] = {"white", "red", "yellow", "blue", "purple", NULL};
 	std::string user_input;

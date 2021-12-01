@@ -9,7 +9,7 @@
 const int AUTO 		= 1;
 const int MANUAL	= 0;
 
-namespace shellchat
+namespace slct
 {
 	class Host
 	{
@@ -34,7 +34,7 @@ namespace shellchat
 			void listenTo(void);
 			void sendToAll(SOCKET sender_socket, UserData_t *UserData);
 			void displayClientsSocket(void);
-			int recvClientMsg(net::Client *Client, shellchat::UserData_t *UserData);
+			int recvClientMsg(net::Client *Client, slct::UserData_t *UserData);
 
 			bool stop_server;
 
@@ -47,4 +47,4 @@ namespace shellchat
 	void handle_client(Host *Host);
 	void host_settings(Host::Data_t *Host);
 	bool command(Host *Host, net::Client *Client, UserData_s *UserData);
-} // namespace shellchat
+} // namespace slct

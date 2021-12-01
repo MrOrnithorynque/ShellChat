@@ -31,7 +31,7 @@ static void nb_args(int const argc)
 	}
 }
 
-static void check_args(int const argc, char **argv, shellchat::Host::Data_t *HostData)
+static void check_args(int const argc, char **argv, slct::Host::Data_t *HostData)
 {
 	if (argc == 2)
 	{
@@ -67,7 +67,7 @@ static void check_args(int const argc, char **argv, shellchat::Host::Data_t *Hos
 	// host_settings(HostData);
 }
 
-void shellchat::error_handling(int const argc, char **argv, shellchat::Host::Data_t *HostData)
+void slct::error_handling(int const argc, char **argv, slct::Host::Data_t *HostData)
 {
 	nb_args(argc);
 	check_args(argc, argv, HostData);

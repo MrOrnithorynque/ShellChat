@@ -3,7 +3,7 @@
 
 #include "client.hpp"
 
-void shellchat::User::changeUsername(void)
+void slct::User::changeUsername(void)
 {
     char *old_username = strdup(UserData.username);
 

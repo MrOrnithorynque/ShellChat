@@ -1,6 +1,6 @@
 #pragma once
 
-namespace shellchat::game
+namespace slct::game
 {
 
 }

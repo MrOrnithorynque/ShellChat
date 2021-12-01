@@ -1,11 +1,11 @@
 #pragma once
 
-namespace shellchat::cmd
+namespace slct::cmd
 {
 	const unsigned int ALL_CMD_LENGTH = 2;
 
-	void launch_game(shellchat::Host *Host);
-	void pv_msg(shellchat::Host *Host, SOCKET recever_socket);
+	void launch_game(slct::Host *Host);
+	void pv_msg(slct::Host *Host, SOCKET recever_socket);
 
 	/*
 	const char *all_cmd[] =
@@ -18,4 +18,4 @@ namespace shellchat::cmd
 		launch_game, pv_msg
 	};
 	*/
-} // shellchat::cmd namespace
+} // slct::cmd namespace

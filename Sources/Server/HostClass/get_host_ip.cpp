@@ -1,6 +1,6 @@
 #include "server.hpp"
 
-void shellchat::Host::getHostIp(void)
+void slct::Host::getHostIp(void)
 {
 	// cmd("hostname -I");
 	return;

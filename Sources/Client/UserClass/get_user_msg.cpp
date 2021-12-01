@@ -9,7 +9,7 @@
 
 #include "client.hpp"
 
-void shellchat::User::getUserMsg(void)
+void slct::User::getUserMsg(void)
 {
 	std::string user_input;
 

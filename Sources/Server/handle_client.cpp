@@ -6,7 +6,7 @@
 
 #include "server.hpp"
 
-void shellchat::handle_client(shellchat::Host *Host)
+void slct::handle_client(slct::Host *Host)
 {
     net::Client Client;
 
@@ -16,7 +16,7 @@ void shellchat::handle_client(shellchat::Host *Host)
         Host->Server.waitClientConnection(&Client.ClientData);
         std::cout << "Accept client : " << Client.ClientData.socket_client << "\n";
 
-        std::thread ClientThread(shellchat::client_thread, Host, Client);
+        std::thread ClientThread(slct::client_thread, Host, Client);
         ClientThread.detach();
     }
 }

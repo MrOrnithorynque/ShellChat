@@ -6,7 +6,7 @@
 
 #include "client.hpp"
 
-void shellchat::User::getUserData(void)
+void slct::User::getUserData(void)
 {
 	getUsername();
 	getUserColor();

@@ -1,6 +1,6 @@
 #include "server.hpp"
 
-void shellchat::Host::generatePort(void)
+void slct::Host::generatePort(void)
 {
 	unsigned int test_port = 1;
 

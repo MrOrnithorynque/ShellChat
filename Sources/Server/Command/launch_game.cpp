@@ -1,7 +1,7 @@
 #include "server.hpp"
 #include "command.hpp"
 
-void shellchat::cmd::launch_game(shellchat::Host *Host)
+void slct::cmd::launch_game(slct::Host *Host)
 {
 	return;
 }

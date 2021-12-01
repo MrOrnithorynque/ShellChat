@@ -9,7 +9,7 @@
 #include "client.hpp"
 #include "my_cpp.hpp"
 
-void shellchat::send_msg_thread(shellchat::User *User)
+void slct::send_msg_thread(slct::User *User)
 {
     std::string user_input;
 

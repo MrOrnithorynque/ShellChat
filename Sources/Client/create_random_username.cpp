@@ -28,7 +28,7 @@ const char *r2_name[] =
 };
 
 // VALGRIND 100 ERROR MUST FIX
-char *shellchat::create_random_username(void)
+char *slct::create_random_username(void)
 {
 	srand(time(NULL));
 

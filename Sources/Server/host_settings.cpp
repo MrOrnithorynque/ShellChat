@@ -21,7 +21,7 @@ static void generate_port(unsigned int *PORT)
 	*PORT = test_port;
 }
 
-void shellchat::host_settings(shellchat::Host::Data_t *HostData)
+void slct::host_settings(slct::Host::Data_t *HostData)
 {
 	std::string user_input;
 

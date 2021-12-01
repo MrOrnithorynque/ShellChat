@@ -4,7 +4,7 @@
 #include "network.hpp"
 #include "shellchat.hpp"
 
-namespace shellchat
+namespace slct
 {
     const unsigned int CONNECTED    = 1;
     const unsigned int DISCONNECTED = -1;
@@ -45,4 +45,4 @@ namespace shellchat
     unsigned int    get_server_verification(net::Client *Client);
     void            recv_msg_thread(User *User);
     void            send_msg_thread(User *User);
-} // namespace shellchat
+} // namespace slct

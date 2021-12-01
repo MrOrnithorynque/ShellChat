@@ -2,7 +2,7 @@
 
 #include "server.hpp"
 
-void shellchat::Host::displayClientsSocket(void)
+void slct::Host::displayClientsSocket(void)
 {
     size_t AllClients_size = AllClients.size();
 

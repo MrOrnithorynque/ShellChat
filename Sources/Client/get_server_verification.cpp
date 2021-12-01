@@ -7,7 +7,7 @@
 
 #include "client.hpp"
 
-unsigned int shellchat::get_server_verification(net::Client *Client)
+unsigned int slct::get_server_verification(net::Client *Client)
 {
 	int send_value;
 

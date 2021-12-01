@@ -9,17 +9,17 @@
 #include "shellchat.hpp"
 #include "client.hpp"
 
-void shellchat::chat_room(shellchat::User *User)
+void slct::chat_room(slct::User *User)
 {
     User->stop_chat = false;
 
-    std::thread SendMsgThread(shellchat::send_msg_thread, User);
+    std::thread SendMsgThread(slct::send_msg_thread, User);
     SendMsgThread.detach();
 
-    std::thread RecvMsgThread(shellchat::recv_msg_thread, User);
+    std::thread RecvMsgThread(slct::recv_msg_thread, User);
     RecvMsgThread.detach();
 
-    // std::thread GetServerVerification(shellchat::get_server_verification, User)
+    // std::thread GetServerVerification(slct::get_server_verification, User)
     // GetServerVerification.detach();
     while (!User->stop_chat) {}
 }

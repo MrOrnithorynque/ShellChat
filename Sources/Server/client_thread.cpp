@@ -6,10 +6,10 @@
 #include "server.hpp"
 #include "client.hpp"
 
-void shellchat::client_thread(shellchat::Host *Host, net::Client Client)
+void slct::client_thread(slct::Host *Host, net::Client Client)
 {
     size_t c_size = Host->AllClients.size();
-    shellchat::UserData_t UserData;
+    slct::UserData_t UserData;
     int recv_value;
 
     Host->AllClients.push_back(Client);

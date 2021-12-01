@@ -2,7 +2,7 @@
 
 #include "network.hpp"
 
-namespace shellchat
+namespace slct
 {
 	const unsigned short MAX_MSG_LENGTH      = 400;
     const unsigned short MAX_USERNAME_LENGTH = 30;

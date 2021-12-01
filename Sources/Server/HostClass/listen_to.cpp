@@ -6,7 +6,7 @@
 
 #include "server.hpp"
 
-void shellchat::Host::listenTo(void)
+void slct::Host::listenTo(void)
 {
 	net::check(listen(Server.ServerData.socket_server, MAX_CLIENTS), \
                 "Listen error.\n");

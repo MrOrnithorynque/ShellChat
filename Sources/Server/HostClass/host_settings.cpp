@@ -9,7 +9,7 @@
 
 #include "server.hpp"
 
-void shellchat::Host::hostSettings(int flag) //int flag = MANUAL
+void slct::Host::hostSettings(int flag) //int flag = MANUAL
 {
 	if (flag == AUTO)
 	{

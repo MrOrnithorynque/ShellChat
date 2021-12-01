@@ -3,7 +3,7 @@
 #include "shellchat.hpp"
 #include "server.hpp"
 
-void shellchat::Host::sendToAll(SOCKET sender_socket, shellchat::UserData_t *UserData)
+void slct::Host::sendToAll(SOCKET sender_socket, slct::UserData_t *UserData)
 {
     size_t size = AllClients.size();
 

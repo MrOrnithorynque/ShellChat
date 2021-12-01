@@ -6,21 +6,21 @@
 
 #include "server.hpp"
 
-static void launching_host_server(shellchat::Host *Host)
+static void launching_host_server(slct::Host *Host)
 {
     std::cout << "Launching server ...\n";
 
     Host->bindTo();
     Host->listenTo();
 
-    shellchat::handle_client(Host);
+    slct::handle_client(Host);
 }
 
 int main(int const argc, char **argv)
 {
-    shellchat::Host Host;
+    slct::Host Host;
 
-    shellchat::error_handling(argc, argv, &Host.HostData);
+    slct::error_handling(argc, argv, &Host.HostData);
     launching_host_server(&Host);
 
     Host.Server.closeServer();
