@@ -30,6 +30,7 @@ SRCS		=	main.cpp								\
 				Games/NeTron/recv_game_data.cpp 		\
 				Games/NeTron/render_game.cpp 			\
 				Games/NeTron/send_input.cpp 			\
+				UserClass/change_username.cpp			\
 				UserClass/get_user_color.cpp			\
 				UserClass/get_user_data.cpp 			\
 				UserClass/get_user_msg.cpp 				\

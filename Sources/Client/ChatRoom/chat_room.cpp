@@ -11,6 +11,8 @@
 
 void shellchat::chat_room(shellchat::User *User)
 {
+    User->stop_chat = false;
+
     std::thread SendMsgThread(shellchat::send_msg_thread, User);
     SendMsgThread.detach();
 
@@ -19,4 +21,5 @@ void shellchat::chat_room(shellchat::User *User)
 
     // std::thread GetServerVerification(shellchat::get_server_verification, User)
     // GetServerVerification.detach();
+    while (!User->stop_chat) {}
 }

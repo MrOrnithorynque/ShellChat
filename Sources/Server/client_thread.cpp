@@ -6,58 +6,35 @@
 #include "server.hpp"
 #include "client.hpp"
 
-bool stop_server = false;
-std::vector<net::Client> AllClients;
-
-static void send_to_all(net::Client *Client, shellchat::UserData_t *MyClientData)
+void shellchat::client_thread(shellchat::Host *Host, net::Client Client)
 {
-    size_t size = AllClients.size();
-
-    for (size_t i = 0; i < size; ++i)
-    {
-        if (AllClients[i].ClientData.socket_client != Client->ClientData.socket_client)
-        {
-            std::cout << "sending to " << AllClients[i].ClientData.socket_client << std::endl;
-            send(AllClients[i].ClientData.socket_client, MyClientData, sizeof(*MyClientData), 0);
-        }
-    }
-}
-
-void shellchat::client_thread(net::Client Client)
-{
-    size_t vector_size = AllClients.size();
-    shellchat::UserData_t MyClientData;
+    size_t c_size = Host->AllClients.size();
+    shellchat::UserData_t UserData;
     int recv_value;
 
-    AllClients.push_back(Client);
+    Host->AllClients.push_back(Client);
+    Host->displayClientsSocket();
 
     // std::thread client_verification_thread(client_verification, &AllClients);
     // client_verification_thread.join();
 
-    while (!stop_server)
+    while (!Host->stop_server)
     {
-        recv_value = recv(Client.ClientData.socket_client, &MyClientData, sizeof(UserData_t), 0);
-
+        recv_value = Host->recvClientMsg(&Client, &UserData);
+ 
         if (recv_value > 0)
         {
-            // if (!command(MyClientData.client_msg)) {
-            std::cout << MyClientData.username << " : " << MyClientData.client_msg << std::endl;
-
-            send_to_all(&Client, &MyClientData);
-            bzero(&MyClientData.client_msg, 200);
+            // if (!command(UserData.client_msg)) {
+            std::cout << UserData.username << " : " << UserData.client_msg << std::endl;
+            Host->sendToAll(Client.ClientData.socket_client, &UserData);
         }
         else if (recv_value == 0)
         {
-            std::cout << "client left\n";
-            stop_server = true;
-            std::swap(AllClients[vector_size], AllClients[AllClients.size()]);
-            AllClients.pop_back();
+            std::cout << UserData.username << " left\n";
+
+            std::swap(Host->AllClients[c_size], Host->AllClients[Host->AllClients.size() - 1]);
+            Host->AllClients.pop_back();
+            return;
         }
-        /*
-        else
-        {
-            stop_server = true;
-        }
-        */
     }
 }

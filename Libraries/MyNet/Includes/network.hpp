@@ -89,8 +89,7 @@ namespace net
             Data_t ServerData;
 
             void closeServer(void);
-            template <typename T>
-            int send(SOCKET socket, T *buf, int flag = 0);
+            template <typename T> int sendTo(SOCKET socket, T *buf);
             void waitClientConnection(Client::Data_t *ClientData);
 
             Server() { serverData(); }

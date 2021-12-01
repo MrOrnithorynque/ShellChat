@@ -6,7 +6,7 @@
 
 #include "server.hpp"
 
-void shellchat::host::bind(void)
+void shellchat::Host::bindTo(void)
 {
 	net::check(bind(Server.ServerData.socket_server,
 					(SOCKADDR *) &Server.ServerData.addr_server,

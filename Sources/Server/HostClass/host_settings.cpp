@@ -9,7 +9,7 @@
 
 #include "server.hpp"
 
-void shellchat::Host::hostSettings(int flag = MANUAL)
+void shellchat::Host::hostSettings(int flag) //int flag = MANUAL
 {
 	if (flag == AUTO)
 	{
@@ -30,7 +30,7 @@ void shellchat::Host::hostSettings(int flag = MANUAL)
 	}
 	else
 	{
-		strcpy(HostData.IP_ADDRESS, user_input.c_str);
+		strcpy(HostData.IP_ADDRESS, user_input.c_str());
 	}
 
 	std::cout << "Enter the port of your server (Default is random) :\n";

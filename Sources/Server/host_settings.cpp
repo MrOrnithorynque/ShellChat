@@ -7,7 +7,7 @@
 
 #include "server.hpp"
 
-static void get_host_ip(char *IP_ADRESS)
+static void get_host_ip(char *IP_ADDRESS)
 {
 	// cmd("hostname -I");
 	return;

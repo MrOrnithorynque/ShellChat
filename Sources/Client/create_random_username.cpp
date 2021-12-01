@@ -30,8 +30,10 @@ const char *r2_name[] =
 // VALGRIND 100 ERROR MUST FIX
 char *shellchat::create_random_username(void)
 {
-	unsigned int name_1 	= srand(time(NULL)) % 11; // my_cpp::array_2d_len(r1_name);
-	unsigned int name_2 	= srand(time(NULL)) % 11; // my_cpp::array_2d_len(r2_name);
+	srand(time(NULL));
+
+	unsigned int name_1 	= rand() % 11; // my_cpp::array_2d_len(r1_name);
+	unsigned int name_2 	= rand() % 11; // my_cpp::array_2d_len(r2_name);
 	char *random_username 	= (char *)malloc(sizeof(char) * (strlen(r1_name[name_1]) + strlen(r2_name[name_2]) + 2));
 
 	strcat(strcat(strcat(random_username, r1_name[name_1]), "-"), r2_name[name_2]);
