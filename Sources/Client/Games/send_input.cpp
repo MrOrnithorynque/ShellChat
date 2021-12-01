@@ -5,15 +5,14 @@
 */
 
 #include <ncurses.h>
+#include <iostream>
 
 #include "network.hpp"
+#include "games.hpp"
 
 // FUNCTION is in a thread
 void send_input(void)
 {
-	initscr();
-  	keypad(stdscr, TRUE);
-	getch();
-
-	// send the input to server
+	// send struct with user input or just char?
+	return;
 }

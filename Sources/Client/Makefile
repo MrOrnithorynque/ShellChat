@@ -18,18 +18,10 @@ SRCS		=	main.cpp								\
 				ChatRoom/chat_room.cpp					\
 				ChatRoom/recv_msg_thread.cpp			\
 				ChatRoom/send_msg_thread.cpp			\
-				Games/CityBomber/main.cpp 				\
-				Games/CityBomber/recv_game_data.cpp 	\
-				Games/CityBomber/render_game.cpp 		\
-				Games/CityBomber/send_input.cpp 		\
-				Games/ConNet4/main.cpp 					\
-				Games/ConNet4/recv_game_data.cpp 		\
-				Games/ConNet4/render_game.cpp 			\
-				Games/ConNet4/send_input.cpp 			\
-				Games/NeTron/main.cpp 					\
-				Games/NeTron/recv_game_data.cpp 		\
-				Games/NeTron/render_game.cpp 			\
-				Games/NeTron/send_input.cpp 			\
+				Games/game_main.cpp 					\
+				Games/get_input.cpp 					\
+				Games/render_game.cpp 					\
+				Games/send_input.cpp 					\
 				UserClass/change_username.cpp			\
 				UserClass/get_user_color.cpp			\
 				UserClass/get_user_data.cpp 			\

@@ -21,17 +21,13 @@ SRCS		=	main.cpp								\
 				Command/command.cpp						\
 				Command/pv_msg.cpp 						\
 				Games/CityBomber/main.cpp 				\
-				Games/CityBomber/recv_input.cpp			\
 				Games/CityBomber/render_game.cpp 		\
-				Games/CityBomber/send_game_data.cpp 	\
 				Games/ConNet4/main.cpp 					\
-				Games/ConNet4/recv_input.cpp			\
 				Games/ConNet4/render_game.cpp 			\
-				Games/ConNet4/send_game_data.cpp 		\
 				Games/NeTron/main.cpp 					\
-				Games/NeTron/recv_input.cpp				\
 				Games/NeTron/render_game.cpp 			\
-				Games/NeTron/send_game_data.cpp 		\
+				Games/recv_input.cpp 					\
+				Games/send_game_data.cpp 				\
 				HostClass/bind_to.cpp 					\
 				HostClass/display_clients_socket.cpp	\
 				HostClass/generate_port.cpp 			\
