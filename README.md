@@ -2,26 +2,33 @@
 
 # ShellChat (In progress)
 ShellChat is a little program to chat with your friend and play simple games within the same network.</br>
-*(will MAYBE update to enable chat trough internet)*
+>*(will MAYBE update to enable chat trough internet)*
 
 </br>
 
 # How to use :
 - Build the project
-  > make
+  ```bash
+  make
+  ```
 
   Two binaries will be created :
-  > Binaries</br>
-  > ├───ShellChat_server</br>
-  > └───ShellChat_client</br>
+  ```bash
+  Binaries
+  ├───ShellChat_server
+  └───ShellChat_client
+  ```
 
 - Launch the server binary
-  > ./ShellChat_server [IP ADRESS] [PORT]
-  
+  ```bash
+  ./ShellChat_server [IP ADRESS] [PORT]
+  ```
   And wait for the client(s) to connect.
  
 - Launch the client binary
-  > ./ShellChat_client [IP ADRESS] [PORT]
+  ```bash
+  ./ShellChat_client [IP ADRESS] [PORT]
+  ```
 
 </br>
 
