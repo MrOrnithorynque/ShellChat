@@ -8,7 +8,7 @@
 #include <iostream>
 
 #include "network.hpp"
-#include "games.hpp"
+#include "game.hpp"
 
 // FUNCTION is in a thread
 void send_input(void)

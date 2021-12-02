@@ -8,7 +8,7 @@ EXEC_NAME	=	ShellChat_server
 EXEC_PATH	=	../../Binaries/
 
 CFLAGS 		= 	-Wall -Wextra -g
-CPPFLAGS	= 	-I../../Includes/ -I../Client -I./ -I../
+CPPFLAGS	= 	-I../../Includes/ -I../Client -I./ -I../Includes/
 LDFLAGS 	= 	-L../../Libraries/
 LDLIBS 		=	-lmy_cpp -lnetwork -pthread -lncurses
 

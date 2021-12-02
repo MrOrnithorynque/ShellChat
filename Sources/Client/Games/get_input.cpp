@@ -1,7 +1,7 @@
 #include "ncurses.h"
 
 #include "network.hpp"
-#include "games.hpp"
+#include "game.hpp"
 
 void get_input(void)
 {

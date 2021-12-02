@@ -2,10 +2,10 @@
 **
 */
 
-#include "MYCPP/string.hpp"
 #include "MYCPP/array.hpp"
+#include "MYCPP/string.hpp"
 
-char *rm_white_space(char *str, char c = ' ')
+char *my_cpp::rm_white_space(char *str, char c /*= ' '*/)
 {
     for (size_t i = 0; str[i] != '\0'; ++i)
     {
