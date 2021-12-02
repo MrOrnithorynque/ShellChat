@@ -8,6 +8,7 @@ ShellChat is a little program to chat with your friend and play simple games wit
 
 # How to use :
 If you are on Linux follow the instructions bellow.
+>note that if you don't want to install all the dependencies you can follow the Windows docker part.
 - Build the project
   ```bash
   make
