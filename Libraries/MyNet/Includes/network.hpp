@@ -22,7 +22,7 @@
 #define closesocket(s)      close(s)
 #define INVALID_SOCKET      -1
 #define SOCKET_ERROR        -1
-#define IP                  "127.0.0.1"
+#define IP                  "127.0.0.1" //gethostname(char *name, size_t len); #include unistd.h
 const int LOAD_NO_DATA      = 0;
 const int MAX_CLIENTS       = 5;
 const int LOAD_DATA         = 1;
