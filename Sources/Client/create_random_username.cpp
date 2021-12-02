@@ -16,7 +16,8 @@ const char *r1_name[] =
 	"turbo",	"negative", 		"unstonk",
 	"super", 	"marvelous", 		"tendentious",
 	"gay",		"problematic",		"stonk", 
-	"chad",		"mr", 				NULL
+	"chad",		"mr", 				"sigma",
+	"beta", 	"alpha", 			NULL
 };
 
 const char *r2_name[] =
@@ -32,7 +33,7 @@ char *slct::create_random_username(void)
 {
 	srand(time(NULL));
 
-	unsigned int name_1 	= rand() % 11; // my_cpp::array_2d_len(r1_name);
+	unsigned int name_1 	= rand() % 13; // my_cpp::array_2d_len(r1_name);
 	unsigned int name_2 	= rand() % 11; // my_cpp::array_2d_len(r2_name);
 	char *random_username 	= (char *)malloc(sizeof(char) * (strlen(r1_name[name_1]) + strlen(r2_name[name_2]) + 2));
 
