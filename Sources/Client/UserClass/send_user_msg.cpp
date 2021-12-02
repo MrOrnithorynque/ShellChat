@@ -10,6 +10,5 @@
 
 void slct::User::sendUserMsg(void)
 {
-	std::cout << UserData.username << " : " << UserData.user_msg << std::endl;
 	send(Client.ClientData.socket_client, &UserData, sizeof(slct::User::Data_t), 0);
 }
