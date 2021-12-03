@@ -1,12 +1,14 @@
-//Not fully working for the moment (will update soon)
+//Not perfetlcy working for the moment (will update very soon)
 
 # ShellChat (In progress)
-ShellChat is a little program to chat with your friend and play simple games within the same network.</br>
+ShellChat is a little program to chat with your friend and play simple games within the same network for __Linux__ and __Windows__.</br>
 >*(will MAYBE update to enable chat trough internet)*
 
 </br>
 
 # How to use :
+If you are on Linux follow the instructions bellow.
+>note that if you don't want to install all the dependencies you can follow the Windows docker part.
 - Build the project
   ```bash
   make
@@ -25,10 +27,19 @@ ShellChat is a little program to chat with your friend and play simple games wit
   ```
   And wait for the client(s) to connect.
  
-- Launch the client binary
+- Launch the client(s) binary(ies)
   ```bash
   ./ShellChat_client [IP ADRESS] [PORT]
   ```
+And now, if you are on Windows.
+- Make sure you have docker installed.
+- Switch to Linux containers.
+- Build the project
+  ```bash
+  make docker
+  ```
+  This command will build the docker and launch it for you.</br>
+  Now you are on a Linux environment so follow the Linux instruction you have seen upward.
 
 </br>
 
@@ -41,9 +52,6 @@ __But, which games ?__ </br>
   - CityBomber (RTX EDITION)
   - Navy
   - And maybe a SFML game.
- 
-### Windows/Mac/Linux compatibility
-I want to dockerise the app, I'm not sure if I will take the time to do it but for the moment it is in a side of my head.
 
 ### Better interface
 I will still keep a minimalist shell-like interface but probably give it a little bit more character.

@@ -1,5 +1,5 @@
-Binaries/
-Includes/
+/Binaries/
+/Includes/
 .vscode/
 *.o
 *.a
