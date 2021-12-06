@@ -12,7 +12,8 @@ all:
 	make make_srcs
 
 make_libs:
-	mkdir -p Includes Binaries
+	mkdir -p Includes
+	mkdir -p Binaries
 	make -C $(LIBS_PATH)
 
 make_srcs:

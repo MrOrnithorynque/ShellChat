@@ -53,7 +53,7 @@ static void get_number_in_str(Number_t *Number, char *str)
     Number->is_number = -1;
 }
 
-int get_integer(char *str)
+int my_cpp::get_integer(char *str)
 {
     Number_t Number = {1, 0, 0};
 

@@ -3,7 +3,10 @@
 */
 
 #include <iostream>
+#include <cstring>
 
+#include "MYCPP/string.hpp"
+#include "MYCPP/array.hpp"
 #include "server.hpp"
 
 static void launching_host_server(slct::Host *Host)
@@ -22,7 +25,6 @@ int main(int const argc, char **argv)
 
     slct::error_handling(argc, argv, &Host.HostData);
 
-    //std::cout << my_cpp::rm_white_space("     ezdscfrf  erzgzvrez    reg       r") << std::endl;
     launching_host_server(&Host);
 
     Host.Server.closeServer();
